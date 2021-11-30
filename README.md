@@ -1,6 +1,6 @@
 # My personal website
 
-Jekyll template forked from [al-folio]{https://github.com/alshedivat/al-folio}.
+Jekyll template forked from [al-folio](https://github.com/alshedivat/al-folio).
 
 ## Useful commands
 
