@@ -1,28 +1,82 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
 
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation,}
+@inproceedings{fourmy2019absolute,
+  abbr={AbsoluteLoca},
+  title={Absolute humanoid localization and mapping based on IMU Lie group and fiducial markers},
+  author={Fourmy, Mederic and Atchuthan, Dinesh and Mansard, Nicolas and Sola, Joan and Flayols, Thomas},
+  abstract={Current locomotion algorithms in structured (indoor) 3D environments require an accurate localization. The
+several and diverse sensors typically embedded on legged robots
+(IMU, coders, vision and/or LIDARS) should make it possible
+if properly fused. Yet this is a difficult task due to the heterogeneity of these sensors and the real-time requirement of the
+control. While previous works were using staggered approaches
+(odometry at high frequency, sparsely corrected from vision and
+LIDAR localization), the recent progress in optimal estimation,
+in particular in visual-inertial localization, is paving the way to
+a holistic fusion. This paper is a contribution in this direction.
+We propose to quantify how a visual-inertial navigation system
+can accurately localize a humanoid robot in a 3D indoor
+environment tagged with fiducial markers. We introduce a theoretical contribution strengthening the formulation of Forster’s
+IMU pre-integration, a practical contribution to avoid possible
+ambiguity raised by pose estimation of fiducial markers, and an
+experimental contribution on a humanoid dataset with ground
+truth. Our system is able to localize the robot with less than 2 cm
+errors once the environment is properly mapped. This would
+naturally extend to additional measurements corresponding to
+leg odometry (kinematic factors) thanks to the genericity of the
+proposed pre-integration algebra.},
+  booktitle={2019 IEEE-RAS 19th International Conference on Humanoid Robots (Humanoids)},
+  pages={237--243},
+  year={2019},
+  organization={IEEE},
+  html={https://ieeexplore.ieee.org/document/9035005},
+  pdf={https://hal.archives-ouvertes.fr/hal-02183498/document},
+  selected={true}
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics,},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers,}
+
+@inproceedings{fourmy2021contact,
+  abbr={ContactPreint},
+  title={Contact Forces Preintegration for Estimation in Legged Robotics using Factor Graphs},
+  author={Fourmy, M{\'e}d{\'e}ric and Flayols, Thomas and L{\'e}ziart, Pierre-Alexandre and Mansard, Nicolas and Sol{\`a}, Joan},
+  abstract={State estimation, in particular estimation of the
+base position, orientation and velocity, plays a big role in
+the efficiency of legged robot stabilization. The estimation of
+the base state is particularly important because of its strong
+correlation with the underactuated dynamics, i.e. the evolution
+of center of mass and angular momentum. Yet this estimation
+is typically done in two phases, first estimating the base state,
+then reconstructing the center of mass from the robot model.
+The underactuated dynamics is indeed not properly observed,
+and any bias in the model would not be corrected from
+the sensors. While it has already been observed that force
+measurements make such a bias observable, these are often
+only used for a binary estimation of the contact state. In this
+paper, we propose to simultaneously estimate the base and the
+underactuation state by using all measurements simultaneously.
+To this end, we propose several contributions to implement a
+complete state estimator using factor graphs. Contact forces
+altering the underactuated dynamics are pre-integrated using
+a novel adaptation of the IMU pre-integration method, which
+constitutes the principal contribution. IMU pre-integration is
+also used to measure the positional motion of the base. Encoder
+measurements are then participating to the estimation in two
+ways: by providing leg odometry displacements, contributing to
+the observability of IMU biases; and by relating the positional
+and centroidal states, thus connecting the whole graph and
+producing a tightly-coupled whole-body estimator. The validity
+of the approach is demonstrated on real data captured by the
+Solo12 quadruped robot},
+  booktitle={2021 IEEE International Conference on Robotics and Automation (ICRA)},
+  pages={1372--1378},
+  year={2021},
+  organization={IEEE},
+  html={https://ieeexplore.ieee.org/abstract/document/9561037},
+  pdf={https://hal.archives-ouvertes.fr/hal-02991717/document},
+  selected={true}
 }
+
 
 @article{PhysRev.47.777,
   abbr={PhysRev},
@@ -40,33 +94,6 @@
   doi={10.1103/PhysRev.47.777},
   url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
   html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
+  pdf={https://arxiv.org/pdf/2103.12352.pdf},
   selected={true}
-}
-
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik,},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.,},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
 }
