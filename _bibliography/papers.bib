@@ -5,7 +5,7 @@
 @inproceedings{fourmy2019absolute,
   abbr={AbsoluteLoca},
   title={Absolute humanoid localization and mapping based on IMU Lie group and fiducial markers},
-  author={Fourmy, Mederic and Atchuthan, Dinesh and Mansard, Nicolas and Sola, Joan and Flayols, Thomas},
+  author={Fourmy, M{\'e}d{\'e}ric and Atchuthan, Dinesh and Mansard, Nicolas and Sola, Joan and Flayols, Thomas},
   abstract={Current locomotion algorithms in structured (indoor) 3D environments require an accurate localization. The
 several and diverse sensors typically embedded on legged robots
 (IMU, coders, vision and/or LIDARS) should make it possible
@@ -78,22 +78,77 @@ Solo12 quadruped robot},
 }
 
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein, A. and Podolsky, B. and Rosen, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.,},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={https://arxiv.org/pdf/2103.12352.pdf},
+@article{debeunne2021cosyslam,
+  abbr={CosySLAM},
+  title={CosySLAM: tracking contact features using visual-inertial object-level SLAM for locomotion},
+  author={Debeunne, C{\'e}sar and Fourmy, M{\'e}d{\'e}ric and Labb{\'e}, Yann and L{\'e}ziart, Pierre-Alexandre and Saurel, Guilhem and Sol{\`a}, Joan and Mansard, Nicolas},
+  abstract={A legged robot is equipped with several sensors
+observing different classes of information, in order to provide
+various estimates on its states and its environment. While state
+estimation and mapping in this domain have traditionally been
+investigated through multiple local filters, recent progresses
+have been made toward tightly-coupled estimation. Multiple
+observations are then merged into an a-posteriori maximum
+estimating several quantities that otherwise were separately
+estimated. With this paper, our goal is to move one step further,
+by leveraging on object-based simultaneous localization and
+mapping. We use an object pose estimator to localize the relative
+placement of the robot with respect to large elements of the
+environments, e.g. stair steps. These measurements are merged
+with other typical observations of legged robots, e.g. inertial
+measurements, to provide an estimation of the robot state
+(position, orientation and velocity of the basis) along with an
+accurate estimation of the environment pieces. It then provides
+a consistent estimation of these two quantities, which is an
+important property as both would be needed to control the
+robot locomotion. We provide a complete implementation of
+this idea with the object tracker CosyPose, which we trained
+on our environment and for which we provide a covariance
+model, and with the SLAM engine Wolf used as a visual-inertial
+estimator on the quadruped robot Solo.},
+  year={2021},
+  booktitle={hal preprint hal-03351438},
+  pdf={https://hal.archives-ouvertes.fr/hal-03351438/file/CosySLAM_ICRA_2022.pdf},
   selected={true}
 }
+
+%  url={https://homepages.laas.fr/mfourmy/icra22_cosyslam},
+
+
+@article{sola2021wolf,
+  abbr={WOLF},
+  title={WOLF: A modular estimation framework for robotics based on factor graphs},
+  author={Sola, Joan and Vallve-Navarro, Joan and Casals, Joaquim and Deray, Jeremie and Fourmy, M{\'e}d{\'e}ric and Atchuthan, Dinesh and Andrade-Cetto, Juan},
+  abstract={This paper introduces WOLF, a C++ estimation
+framework based on factor graphs and targeted at mobile
+robotics. WOLF extends the applications of factor graphs from
+the typical problems of SLAM and odometry to a general
+estimation framework able to handle self-calibration, model
+identification, or the observation of dynamic quantities other
+than localization. WOLF produces high throughput estimates
+at sensor rates up to the kHz range, which can be used for
+feedback control of highly dynamic robots such as humanoids,
+quadrupeds or aerial manipulators. Departing from the factor
+graph paradigm, the architecture of WOLF allows for a modular
+yet tightly-coupled estimator. Modularity is based on plugins
+that are loaded at runtime. Then, integration is achieved simply
+through YAML files, allowing users to configure a wide range
+of applications without the need of writing or compiling code.
+Synchronization of incoming data and their processing into
+a unique factor graph is achieved through a decentralized
+strategy of frame creation and joining. Most algorithmic assets
+are coded as abstract algorithms in base classes with varying
+levels of specialization. Overall, these assets allow for coherent
+processing and favor code reusability and scalability. WOLF can
+be interfaced with different solvers, and we provide a wrapper
+to Google Ceres. Likewise, we offer ROS integration, providing
+a generic ROS node and specialized packages with subscribers
+and publishers. WOLF is made publicly available and open to
+collaboration.},
+  journal={arXiv preprint arXiv:2110.12919},
+  pdf={https://arxiv.org/pdf/2110.12919.pdf},
+  year={2021},
+  selected={true}
+}
+
+

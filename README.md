@@ -17,3 +17,6 @@ docker build -t jekyll-imgmagick .
 docker run --name jekyll-server --volume="$PWD:/srv/jekyll" -p 4000:4000 -it jekyll-imgmagick jekyll serve
 docker stop jekyll-server
 docker restart jekyll-server
+
+
+git config --global user.email "mederic.fourmy@example.com"
