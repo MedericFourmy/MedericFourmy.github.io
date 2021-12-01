@@ -19,8 +19,6 @@ jekyll serve -l
 jekyll build  
 ```
 
-git config --global user.email "mederic.fourmy@example.com"
-
 When happy deploy already built project to master branch:  
 `./bin/deploy --no-build --user`
 If failed deploy
