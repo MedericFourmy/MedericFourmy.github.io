@@ -20,3 +20,9 @@ docker restart jekyll-server
 
 
 git config --global user.email "mederic.fourmy@example.com"
+
+
+### Failed deploy
+sudo chown -R mfourmy:gepetto .
+git reset --hard source
+git clean -fd
