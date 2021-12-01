@@ -97,6 +97,8 @@ git checkout -b $DEPLOY_BRANCH
 # Build site
 [[ ${NO_BUILD} ]] || bundle exec jekyll build
 
+sudo chown -R mfourmy:gepetto .
+
 # Delete and move files
 find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name 'CNAME' ! -name '.gitignore' -exec rm -rf {} \;
 mv _site/* .
