@@ -35,6 +35,9 @@ while [[ $# > 0 ]]; do
         --no-push)
         NO_PUSH="--no-push"
         ;;
+        --no-build)
+        NO_BUILD="--no-build"
+        ;;
         *)
         echo "Option $1 is unknown." >&2
         echo $USAGE_MSG >&2
@@ -92,7 +95,7 @@ fi
 git checkout -b $DEPLOY_BRANCH
 
 # Build site
-bundle exec jekyll build
+[[ ${NO_BUILD} ]] || bundle exec jekyll build
 
 # Delete and move files
 find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name 'CNAME' ! -name '.gitignore' -exec rm -rf {} \;
