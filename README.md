@@ -11,12 +11,12 @@ Change authorization for jekyll build to work:
 Build the local docker image
 
 `docker build -t jekyll-imgmagick .`
+Simplest way: work from inside the container command line
 
-run, stop, restart the container  
-```
-docker run --name jekyll-server --volume="$PWD:/srv/jekyll" -p 4000:4000 -it jekyll-imgmagick jekyll serve   
-docker stop jekyll-server  
-docker restart jekyll-server   
+```bash
+docker run --rm --volume="$PWD:/srv/jekyll" -p 4000:4000 -it jekyll-imgmagick sh   
+jekyll serve -l 
+jekyll build  
 ```
 
 git config --global user.email "mederic.fourmy@example.com"
@@ -24,7 +24,8 @@ git config --global user.email "mederic.fourmy@example.com"
 When happy deploy already built project:  
 `./bin/deploy --no-push --no-build --user`
 If failed deploy
-```
+
+```bash
 sudo chown -R mfourmy:gepetto .  
 git reset --hard source  
 git clean -fd  
