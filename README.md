@@ -21,8 +21,8 @@ jekyll build
 
 git config --global user.email "mederic.fourmy@example.com"
 
-When happy deploy already built project:  
-`./bin/deploy --no-push --no-build --user`
+When happy deploy already built project to master branch:  
+`./bin/deploy --no-build --user`
 If failed deploy
 
 ```bash
