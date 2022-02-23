@@ -77,53 +77,14 @@ Solo12 quadruped robot},
   selected={true}
 }
 
-@unpublished{debeunne:hal-03351438,
-  abbr={CosySLAM},
-  TITLE = {{CosySLAM: tracking contact features using visual-inertial object-level SLAM for locomotion}},
-  AUTHOR = {Debeunne, C{\'e}sar and Fourmy, M{\'e}d{\'e}ric and Labb{\'e}, Yann and L{\'e}ziart, Pierre-Alexandre and Saurel, Guilhem and Sol{\`a}, Joan and Mansard, Nicolas},
-  abstract={A legged robot is equipped with several sensors
-observing different classes of information, in order to provide
-various estimates on its states and its environment. While state
-estimation and mapping in this domain have traditionally been
-investigated through multiple local filters, recent progresses
-have been made toward tightly-coupled estimation. Multiple
-observations are then merged into an a-posteriori maximum
-estimating several quantities that otherwise were separately
-estimated. With this paper, our goal is to move one step further,
-by leveraging on object-based simultaneous localization and
-mapping. We use an object pose estimator to localize the relative
-placement of the robot with respect to large elements of the
-environments, e.g. stair steps. These measurements are merged
-with other typical observations of legged robots, e.g. inertial
-measurements, to provide an estimation of the robot state
-(position, orientation and velocity of the basis) along with an
-accurate estimation of the environment pieces. It then provides
-a consistent estimation of these two quantities, which is an
-important property as both would be needed to control the
-robot locomotion. We provide a complete implementation of
-this idea with the object tracker CosyPose, which we trained
-on our environment and for which we provide a covariance
-model, and with the SLAM engine Wolf used as a visual-inertial
-estimator on the quadruped robot Solo.},
-  URL = {https://hal.archives-ouvertes.fr/hal-03351438},
-  NOTE = {working paper or preprint},
-  HAL_LOCAL_REFERENCE = {Rapport LAAS n{\textdegree} 21255},
-  YEAR = {2021},
-  MONTH = Sep,
-  PDF = {https://hal.archives-ouvertes.fr/hal-03351438/file/CosySLAM_ICRA_2022.pdf},
-  HAL_ID = {hal-03351438},
-  HAL_VERSION = {v1},
-  selected={true},
-}
-
-
-%  url={https://homepages.laas.fr/mfourmy/icra22_cosyslam},
-
 
 @article{sola2021wolf,
   abbr={WOLF},
   title={WOLF: A modular estimation framework for robotics based on factor graphs},
-  author={Sola, Joan and Vallve-Navarro, Joan and Casals, Joaquim and Deray, Jeremie and Fourmy, M{\'e}d{\'e}ric and Atchuthan, Dinesh and Andrade-Cetto, Juan},
+  author={Sola, Joan and Vallve, Joan and Casals, Joaquim and Deray, Jeremie and Fourmy, M{\'e}d{\'e}ric and Atchuthan, Dinesh and Corominas-Murtra, Andreu and Andrade-Cetto, Juan},
+  journal={IEEE Robotics and Automation Letters},
+  year={2022},
+  publisher={IEEE},
   abstract={This paper introduces WOLF, a C++ estimation
 framework based on factor graphs and targeted at mobile
 robotics. WOLF extends the applications of factor graphs from
@@ -150,10 +111,45 @@ to Google Ceres. Likewise, we offer ROS integration, providing
 a generic ROS node and specialized packages with subscribers
 and publishers. WOLF is made publicly available and open to
 collaboration.},
-  journal={arXiv preprint arXiv:2110.12919},
   pdf={https://arxiv.org/pdf/2110.12919.pdf},
-  year={2021},
-  selected={true}
+  selected={true},
 }
 
 
+@unpublished{debeunne:hal-03351438,
+  abbr={CosySLAM},
+  TITLE = {CosySLAM: tracking contact features using visual-inertial object-level SLAM for locomotion},
+  AUTHOR = {Debeunne, C{\'e}sar and Fourmy, M{\'e}d{\'e}ric and Labb{\'e}, Yann and L{\'e}ziart, Pierre-Alexandre and Saurel, Guilhem and Sol{\`a}, Joan and Mansard, Nicolas},
+  abstract={A legged robot is equipped with several sensors
+observing different classes of information, in order to provide
+various estimates on its states and its environment. While state
+estimation and mapping in this domain have traditionally been
+investigated through multiple local filters, recent progresses
+have been made toward tightly-coupled estimation. Multiple
+observations are then merged into an a-posteriori maximum
+estimating several quantities that otherwise were separately
+estimated. With this paper, our goal is to move one step further,
+by leveraging on object-based simultaneous localization and
+mapping. We use an object pose estimator to localize the relative
+placement of the robot with respect to large elements of the
+environments, e.g. stair steps. These measurements are merged
+with other typical observations of legged robots, e.g. inertial
+measurements, to provide an estimation of the robot state
+(position, orientation and velocity of the basis) along with an
+accurate estimation of the environment pieces. It then provides
+a consistent estimation of these two quantities, which is an
+important property as both would be needed to control the
+robot locomotion. We provide a complete implementation of
+this idea with the object tracker CosyPose, which we trained
+on our environment and for which we provide a covariance
+model, and with the SLAM engine Wolf used as a visual-inertial
+estimator on the quadruped robot Solo.},
+  URL = {https://hal.archives-ouvertes.fr/hal-03351438},
+  journal={adzadazazzadaz},
+  NOTE = {working paper or preprint},
+  HAL_LOCAL_REFERENCE = {Rapport LAAS n{\textdegree} 21255},
+  PDF = {https://hal.archives-ouvertes.fr/hal-03351438/file/CosySLAM_ICRA_2022.pdf},
+  HAL_ID = {hal-03351438},
+  HAL_VERSION = {v1},
+  selected={true}
+}
