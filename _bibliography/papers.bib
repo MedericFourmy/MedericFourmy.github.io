@@ -26,7 +26,7 @@ errors once the environment is properly mapped. This would
 naturally extend to additional measurements corresponding to
 leg odometry (kinematic factors) thanks to the genericity of the
 proposed pre-integration algebra.},
-  booktitle={2019 IEEE-RAS 19th International Conference on Humanoid Robots (Humanoids)},
+  booktitle={IEEE-RAS 19th International Conference on Humanoid Robots (Humanoids)},
   pages={237--243},
   year={2019},
   organization={IEEE},
@@ -68,7 +68,7 @@ and centroidal states, thus connecting the whole graph and
 producing a tightly-coupled whole-body estimator. The validity
 of the approach is demonstrated on real data captured by the
 Solo12 quadruped robot},
-  booktitle={2021 IEEE International Conference on Robotics and Automation (ICRA)},
+  booktitle={IEEE International Conference on Robotics and Automation (ICRA)},
   pages={1372--1378},
   year={2021},
   organization={IEEE},
@@ -118,37 +118,14 @@ collaboration.},
 
 @unpublished{debeunne:hal-03351438,
   abbr={CosySLAM},
-  TITLE = {CosySLAM: tracking contact features using visual-inertial object-level SLAM for locomotion},
+  TITLE = {CosySlam: investigating object-level SLAM for detecting locomotion surfaces},
   AUTHOR = {Debeunne, C{\'e}sar and Fourmy, M{\'e}d{\'e}ric and Labb{\'e}, Yann and L{\'e}ziart, Pierre-Alexandre and Saurel, Guilhem and Sol{\`a}, Joan and Mansard, Nicolas},
-  abstract={A legged robot is equipped with several sensors
-observing different classes of information, in order to provide
-various estimates on its states and its environment. While state
-estimation and mapping in this domain have traditionally been
-investigated through multiple local filters, recent progresses
-have been made toward tightly-coupled estimation. Multiple
-observations are then merged into an a-posteriori maximum
-estimating several quantities that otherwise were separately
-estimated. With this paper, our goal is to move one step further,
-by leveraging on object-based simultaneous localization and
-mapping. We use an object pose estimator to localize the relative
-placement of the robot with respect to large elements of the
-environments, e.g. stair steps. These measurements are merged
-with other typical observations of legged robots, e.g. inertial
-measurements, to provide an estimation of the robot state
-(position, orientation and velocity of the basis) along with an
-accurate estimation of the environment pieces. It then provides
-a consistent estimation of these two quantities, which is an
-important property as both would be needed to control the
-robot locomotion. We provide a complete implementation of
-this idea with the object tracker CosyPose, which we trained
-on our environment and for which we provide a covariance
-model, and with the SLAM engine Wolf used as a visual-inertial
-estimator on the quadruped robot Solo.},
+  abstract={While blindfolded legged locomotion has demonstrated impressive capabilities in the last few years, further progresses are expected from using exteroceptive perception to better adapt the robot behavior to the available surfaces of contact. In this paper, we investigate whether mono cameras are suitable sensors for that aim. We propose to rely on object-level SLAM, fusing RGB images and inertial measurements, to simultaneously estimate the robot balance state (orientation in the gravity field and velocity), the robot position, and the location of candidate contact surfaces. We used CosyPose, a learning-based object pose estimator for which we propose an empirical uncertainty model, as the sole front-end of our visual inertial SLAM. We then combine it with inertial measurements which ideally complete the system observability, although extending the proposed approach would be straightforward (e.g. kinematic information about the contact, or a feature based visual front end). We demonstrate the interest of object-based SLAM on several locomotion sequences, by some absolute metrics and in comparison with other mono SLAM.},
   URL = {https://hal.archives-ouvertes.fr/hal-03351438},
-  journal={adzadazazzadaz},
+  journal={},
   NOTE = {working paper or preprint},
   HAL_LOCAL_REFERENCE = {Rapport LAAS n{\textdegree} 21255},
-  PDF = {https://hal.archives-ouvertes.fr/hal-03351438/file/CosySLAM_ICRA_2022.pdf},
+  PDF = {https://hal.archives-ouvertes.fr/hal-03351438v2/document},
   HAL_ID = {hal-03351438},
   HAL_VERSION = {v1},
   selected={true}
